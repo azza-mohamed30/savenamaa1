@@ -131,7 +131,7 @@ class ImageController extends Controller
               ]);
 
               $image = $request->file('main_image');
-              $imageName = time().'_'.$main_image->getClientOriginalName();
+              $imageName = time().'_'.$image->getClientOriginalName();
               $image->move(public_path('images/photo_images'),$imageName);
 
              $request_data['main_image'] = 'images/photo_images/'.$imageName;
@@ -153,7 +153,7 @@ class ImageController extends Controller
               ]);
 
               $photo = $request->file('photos');
-              $photoName = time().'_'.$photos->getClientOriginalName();
+              $photoName = time().'_'.$photo->getClientOriginalName();
               $photo->move(public_path('images/photo_images'),$photoName);
 
               $request_data['photos'] = 'images/photo_images/'.$photoName;

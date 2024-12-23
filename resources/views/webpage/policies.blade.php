@@ -7,12 +7,17 @@
     <h1>السياسات واللوائح</h1>
     <br><br>
     <div class="policy-grid">
+        @foreach ($policies as $policie)
+
+
         <div class="policy-item">
-            <p>سياسات التبرع</p>
-            <button class="download-btn">تحميل</button>
+            <p> {{$policie->policies_title}} </p>
+            <a href="{{route('policie_show',$policie->id)}}"><button class="download-btn">تحميل</button></a>
 
         </div>
-        <div class="policy-item">
+
+        @endforeach
+        {{-- <div class="policy-item">
             <p>قواعد وشروط عمليات جمع التبرعات</p>
             <button class="download-btn">تحميل</button>
 
@@ -26,7 +31,7 @@
             <p>وثيقة الإفصاح</p>
             <button class="download-btn">تحميل</button>
 
-        </div>
+        </div> --}}
     </div>
 </section>
 

@@ -24,6 +24,12 @@ body {
   overflow-x: hidden;
 }
 
+
+html {
+  scroll-behavior: smooth;
+}
+
+
 /* Global Styles */
 
 
@@ -51,21 +57,32 @@ header {
 
 }
 
-.account p{
+.account img{
 	align-items: right;
 	justify-content: right;
 	text-align: right;
 	font-size:16px;
 	max-width: 100%;
 
+  width: 24px;
+  height: 24px;
 
+}
+.account a{
+  text-decoration: none;
 }
 
 @media (max-width: 768px) {
-.account p{
- margin-left: 250px;
+.account {
+padding-left: 250px;
+ align-items: right;
+ justify-content: right;
+ text-align: right;
+
 
 }
+
+
 
 }
 
@@ -346,7 +363,7 @@ body {
 }
 
 /* Slideshow container */
-/* Slideshow container */
+
 .slideshow-container {
   max-width: 100%;
   position: relative;
@@ -436,6 +453,39 @@ body {
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
+}
+
+
+/* Style for buttons above the images */
+.image-button {
+  position: absolute;
+  top: 70%; /* Adjust to position above the image */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #418657; /* Match the theme */
+  color: white;
+  border: none;
+  padding: 15px 60px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 2; /* Ensure the button is above the image */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.image-button:hover {
+  background-color: #306845; /* Darker green on hover */
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .image-button {
+    padding: 5px 20px;
+      justify-content: center; /* Center horizontally */
+      font-size: 14px;
+  }
 }
 
 
@@ -694,6 +744,8 @@ align-items: center;
   background-color: #fff;
   margin-top: 20px;
 }
+
+
 
 .stat {
   text-align: center;
@@ -976,7 +1028,9 @@ height: 24px;
   }
   /* #D7BDCA */
 
-
+.news-section a{
+  text-decoration: none;
+}
 
 
 
@@ -992,6 +1046,8 @@ height: 24px;
     justify-content: space-around;
     gap: 10px;
   }
+
+
   .container {
     width: 28vmin;
     height: 28vmin;
@@ -1092,8 +1148,10 @@ height: 24px;
 
 .footer-row .footer-col h4 {
     color: #fff;
+
+    font-weight: 600;
     font-size: 1.2rem;
-    font-weight: 400;
+
 }
 
 .footer-col .links {
@@ -1116,7 +1174,8 @@ height: 24px;
 
 .footer-col p {
     margin: 20px 0;
-    color: #bfbfbf;
+    color: #fff;
+    font-weight: 600;
     max-width: 300px;
 }
 
@@ -1130,9 +1189,9 @@ height: 24px;
     height: 40px;
     border-radius: 6px;
     background: none;
-    width: 70%;
+    width: 100%;
     outline: none;
-    border: 1px solid #7489C6;
+    border: 1px solid #fff;
     caret-color: #fff;
     color: #fff;
     padding-left: 10px;
@@ -1171,7 +1230,7 @@ height: 24px;
 }
 
 .footer-col .icons i {
-    color: #afb6c7;
+    color: #fff;
 }
 
 .footer-col .icons i:hover {
@@ -1394,8 +1453,8 @@ height: 24px;
 
 
 
-/* General Section Styling */
-/* Main Section */
+
+/* contact page  */
 .contact-section {
   padding: 20px 10px;
 }
@@ -1405,6 +1464,15 @@ height: 24px;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 10px;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #4B2C20;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 /* Contact Form Container */
@@ -1447,7 +1515,7 @@ height: 24px;
 .submit-btn {
   padding: 10px;
   color: white;
-  background: green;
+  background: #418657;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -1455,21 +1523,42 @@ height: 24px;
 }
 
 .submit-btn:hover {
-  background: #3d7c3a;
-}
-
-/* Social Media Icons */
-.social-media-list img {
-  margin-top: 15px;
-  display: flex;
-  gap: 10px;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: green;
+  background: #205B33;
   cursor: pointer;
 }
 
+/* Social Media Icons */
+  .social-media-list {
+    display: flex; /* Ensure icons are in one row */
+    flex-direction: row; /* Align items horizontally */
+    justify-content: center; /* Center them horizontally */
+    gap: 10px; /* Space between the icons */
+  }
+
+
+  .social-icon {
+    padding: 10px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #418657; /* Ensure background remains green */
+    cursor: pointer;
+  }
+
+  .social-icon img {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1); /* Ensure icons appear white */
+  }
+
+  .social-icon:hover{
+    background-color: #205B33;
+    cursor: pointer;
+  }
 
 
 /* Map Section */
@@ -1493,20 +1582,13 @@ height: 24px;
     width: 25px;
     height: 25px;
   }
-
-
 }
 
 @media screen and (max-width: 480px) {
   .map-container {
     height: 250px;
   }
-
-
 }
-
-
-
 
 
 
@@ -1544,7 +1626,7 @@ height: 24px;
 }
 
 .policy-item p {
-  font-size: 20px;
+  font-size: 24px;
 
   color: #333;
   margin: 0;
@@ -1554,10 +1636,10 @@ height: 24px;
   background-color: #2c7744;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 10px 50px;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 20px;
 }
 
 .download-btn:hover {
@@ -1697,10 +1779,19 @@ height: 24px;
 /* Title */
 .project-page-title {
   text-align: center;
-  margin: 20px 0;
+  margin: 10px 0;
   color: #71494A;
   font-size: 40px;
 }
+
+.project-page-sub {
+  text-align: center;
+  margin: 10px 0;
+  color: black;
+  font-size: 32px;
+}
+
+
 
 /* Container */
 .project-page-container {
@@ -1710,6 +1801,13 @@ height: 24px;
   flex-direction: column;
   gap: 20px;
 }
+
+.project-page-container a{
+  text-decoration: none;
+}
+
+
+
 
 /* Project Item */
 .project-page-item {
@@ -1787,5 +1885,391 @@ height: 24px;
     font-size: 24px;         /* Set the desired font size */
     margin-bottom: 0;
     margin-top: 0;
+  }
+}
+
+/*  صفحة الاخبار*/
+
+/* General Container Styling */
+.news-page-card-container {
+  display: flex;
+  flex-wrap: wrap; /* Enable wrapping for smaller screens */
+  justify-content: center;
+  gap: 20px; /* Spacing between cards */
+  padding: 20px;
+}
+
+/* Individual Card Styling */
+.news-page-card {
+  width: 100%;
+  max-width: 320px; /* Limit card width */
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Ensure images fit without distortion */
+}
+
+/* Card Content Styling */
+.news-page-card-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Header Section */
+.news-page-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.news-page-date {
+  font-size: 14px;
+  color: #555;
+}
+
+.news-page-date-label {
+  font-size: 12px;
+  color: #777;
+}
+
+.news-page-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Title */
+.news-page-card-title {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  text-align: right;
+}
+
+/* Description */
+.news-page-card-description {
+  font-size: 14px;
+  color: #555;
+  text-align: right;
+  line-height: 1.5;
+}
+
+/* Read More */
+.news-page-read-more {
+  font-size: 14px;
+  color: #418657;
+  text-align: right;
+  text-decoration: none;
+}
+
+.news-page-read-more:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .news-page-card-container {
+    gap: 10px; /* Reduce gap for smaller devices */
+  }
+
+  .news-page-card {
+    max-width: 100%; /* Take full width on mobile */
+  }
+
+  .news-page-card-title,
+  .news-page-card-description,
+  .news-page-read-more {
+    font-size: 13px; /* Adjust font sizes for smaller screens */
+  }
+}
+
+.wrapper-news {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+}
+
+
+
+
+
+
+/* صفحة التبرع */
+.form-container {
+  background: white;
+  width: 90%;
+  max-width: 100%;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+h1 {
+  color: #663e3e;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Form Row and Groups */
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  font-size: 18px;
+  font-weight: bold;
+  color: #418657;
+  text-align: right;
+}
+
+input, select, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  align-items: right;
+}
+
+textarea {
+  resize: none;
+}
+
+.upload-input {
+  padding: 10px;
+  background: #fff;
+
+  font-size: 14px;
+  cursor: pointer;
+}
+
+select {
+  padding: 10px;
+  padding-right: 30px; /* Adds space between the arrow and text */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  appearance: none; /* Removes default browser styles */
+  background: white url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23418657" class="bi bi-caret-down-fill" viewBox="0 0 16 16"%3E%3Cpath d="M7.247 11.14 2.451 5.658c-.566-.697-.106-1.658.78-1.658h9.538c.886 0 1.346.961.78 1.658l-4.796 5.482a1 1 0 0 1-1.564 0z"/%3E%3C/svg%3E') no-repeat right 10px center;
+  background-size: 12px;
+  text-align: right; /* Right-align for Arabic text */
+}
+
+select:focus {
+  border-color: #3a754f;
+  outline: none;
+}
+
+select::-ms-expand {
+  display: none; /* Hides default dropdown arrow for Internet Explorer */
+}
+
+
+.submit-button {
+  background: #418657;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.submit-button:hover {
+  background: #3a754f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-group {
+    width: 100%;
+  }
+}
+
+
+
+/*Athath page*/
+
+/* General Styles */
+.project-donation {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  text-align: center;
+  color: #4a4a4a;
+}
+
+.image-overlay {
+  position: relative;
+  width: 100%;
+}
+
+.main-image {
+  width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+}
+
+.overlay-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  text-align: center;
+
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.overlay-content h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.overlay-content p {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.donate-button {
+  background-color: #418657;
+  color: white;
+  padding: 15px 60px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.donate-button:hover {
+  background-color: #3a754f;
+}
+
+
+
+
+
+
+
+/* athath page peper cloth page Section */
+.details-section {
+  padding: 20px;
+
+  border-radius: 10px;
+}
+
+.details-section h2 {
+  color: #418657;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+
+.details-section p {
+
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+
+  gap: 10px;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.step {
+  flex: 1;
+  max-width: 100%;
+  text-align: center;
+  border: 2px solid #418657;
+ background-color: white;
+ margin: 20px;
+ padding: 20px 10px;
+  border-radius: 5%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.step img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.step p {
+  font-size: 20px;
+  color: #333;
+}
+
+.call-to-action {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #4a4a4a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .steps {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .step {
+    max-width: 100%;
+  }
+
+  .main-image {
+    max-height: 250px;
+  }
+
+  .overlay-content {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .donate-button {
+    font-size: 14px;
+    padding: 8px 25px;
+  }
+
+  .overlay-content h1 {
+    font-size: 20px;
+  }
+
+  .overlay-content p {
+    font-size: 14px;
   }
 }

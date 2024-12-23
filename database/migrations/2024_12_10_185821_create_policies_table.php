@@ -13,10 +13,8 @@ return new class extends Migration
     {
         Schema::create('policies', function (Blueprint $table) {
             $table->id();
-            $table->string('policies_title')->nullable();
-            $table->string('policies')->nullable();;
-            $table->string('frame_title')->nullable();;
-            $table->string('frame')->nullable();;
+            $table->string('policies_title');
+            $table->string('policies');
             $table->foreignId('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });

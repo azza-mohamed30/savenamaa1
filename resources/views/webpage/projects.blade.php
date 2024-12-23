@@ -4,6 +4,7 @@
 
 <div class="project-page">
     <h1 class="project-page-title">مشاريعنا</h1>
+    <p class="project-page-sub">قم بختيار فرصة لتبرع معنا والاطلاع على المشاريع</p>
     <div class="project-page-container">
         <!-- Project 1 -->
         <div class="project-page-item">

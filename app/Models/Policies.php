@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Policies extends Model
 {
-    protected $fillable = ['policies_title', 'policies', 'frame_title', 'frame', 'user_id'];
+    protected $fillable = ['policies_title', 'policies', 'user_id'];
 
     public function added()
     {

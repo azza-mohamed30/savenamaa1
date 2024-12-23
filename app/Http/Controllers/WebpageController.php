@@ -6,7 +6,9 @@ use App\Models\Webpage;
 use App\Models\Image;
 use App\Models\Statistic;
 use App\Models\News;
+use App\Models\Policies;
 use Illuminate\Http\Request;
+use App\Models\Financial_report;
 
 class WebpageController extends Controller
 {
@@ -43,13 +45,21 @@ class WebpageController extends Controller
     }
 
 
-
-
-
     public function policies(){
 
-        return view('webpage.policies');
+        $policies = Policies::all();
+
+        return view('webpage.policies',compact('policies'));
     }
+
+    public function policie_show(string $id){
+
+        $policies = Policies::whereId($id)->first();
+
+        return view('webpage.policie_show',compact('policies'));
+    }
+
+
 
 
 
@@ -59,4 +69,53 @@ class WebpageController extends Controller
     }
 
 
+    public function financial(){
+
+        $reports = Financial_report::all();
+        return view('webpage.financial',compact('reports'));
+    }
+
+    public function financial_show(string $id){
+
+        $reports = Financial_report::whereId($id)->first();
+
+        return view('webpage.financial_show',compact('reports'));
+    }
+
+    public function our_news(){
+
+        $news = News::all();
+        return view('webpage.news',compact('news'));
+    }
+
+    public function clothes_project(){
+
+        return view('webpage.clothes_project');
+    }
+
+    public function athath(){
+
+        return view('webpage.athath');
+    }
+
+    public function paper_project(){
+
+        return view('webpage.paper_project');
+    }
+
+    public function donation_form(){
+
+        return view('webpage.donation_form');
+    }
+
+    public function meetings (){
+
+        return view('webpage.meetings');
+    }
+
+    public function meetings_show (){
+
+        $meetings = Meeting::all();
+        return view('webpage.meetings_show',compact('meetings'));
+    }
 }

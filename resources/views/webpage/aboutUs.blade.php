@@ -3,7 +3,6 @@
 @section('content')
 
 
-
 <br><br>
 
 
@@ -55,7 +54,36 @@
 
 
 
-<br><br>
+<br>
+
+<section class="statistics-section">
+
+  <div class="wrapper">
+
+    <div class="container">
+        <span class="num" data-val="10">000</span>
+        <span class="text"> الفعاليات</span>
+    </div>
+
+    <div class="container">
+        <span class="num" data-val="484">000</span>
+        <span class="text">المتطوعين</span>
+    </div>
+
+    <div class="container">
+        <span class="num" data-val="245">000</span>
+        <span class="text">المستفيدين</span>
+    </div>
+
+    <div class="container">
+        <span class="num" data-val="3">000</span>
+        <span class="text">المشاريع</span>
+    </div>
+</div>
+</section>
+
+<br>
+<br>
 
 
 

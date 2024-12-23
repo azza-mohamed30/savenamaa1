@@ -51,11 +51,9 @@
     <thead class="custom_thead">
         <tr>
             <th>#</th>
-            <th> عنوان الهيكل التنظيمي </th>
-            <th> ملف الهيكل التنظيمي </th>
             <th> عنوان اللائحة </th>
-            <th> ملف اللائحة </th>
             <th> تم التعديل والإضافة بواسطة </th>
+            <th> ملف اللائحة </th>
             <th>الحدث</th>
         </tr>
     </thead>
@@ -64,15 +62,16 @@
         @foreach ($policies as $index=>$policie)
         <tr>
             <td>{{$index + 1}}</td>
-            <td>{{$policie->frame_title}}</td>
-            <td><a href="{{ route('policie.show',$policie->id )}}" class="btn btn-success btn-sm"><i class="fa fa-edit"></i> تحميل </a></td>
             <td>{{$policie->policies_title}}</td>
-            <td><a href="{{ route('policie.show',$policie->id )}}" class="btn btn-success btn-sm"><i class="fa fa-edit"></i> تحميل </a></td>
             <td>{{$policie->added->name}}</td>
+            <td><a href="{{ route('download_policie', $policie->id)}}" class="btn btn-success btn-sm"><i class="fa fa-edit"></i> تحميل </a></td>
+
 
             <td>
 
              <a href="{{ route('policie.edit',$policie->id )}}" class="btn btn-info btn-sm"><i class="fa fa-edit"></i> تعديل </a>
+
+             <a href="{{ route('policie.show',$policie->id )}}" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i> عرض </a>
 
 
                 <form action=" {{ route('policie.destroy', $policie->id) }}" method="post" style="display: inline-block">

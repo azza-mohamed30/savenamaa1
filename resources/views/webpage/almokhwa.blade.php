@@ -13,6 +13,7 @@
 
     <div class="mySlides fade">
         <div class="numbertext">{{$index + 1}} / 3</div>
+        <a href="/donation_form">  <button class="image-button">تبرع الأن</button> </a>
         <img src="{{asset($image->main_image)}}" style="width:100%">
 
     </div>
@@ -76,7 +77,7 @@
 
 
       <!-- Fields Section -->
-      <section class="fields-section">
+      <section class="fields-section"  id="fields-section">
           <h2>مجالاتنا</h2>
           <p>جمع الملابس والاثاث وإعادة تدويرها لتوزيعها على المستفيدين</p>
           <div class="fields-container">
@@ -98,18 +99,18 @@
       <section class="projects-section">
           <h2>مشاريعنا</h2>
   <div class="project-cards-container">
-      <a href="page1.html" class="project-card">
+      <a href="/clothes_project" class="project-card">
         <div class="project-card-image" style="background-image: url('{{asset('web/images/project-cloth.png')}}');">
           <div class="project-card-title">مشروع جمع الملابس</div>
 
         </div>
       </a>
-      <a href="page2.html" class="project-card">
+      <a href="/athath" class="project-card">
         <div class="project-card-image" style="background-image: url('{{asset('web/images/Athath.png')}}');">
           <div class="project-card-title">مشروع الجسد الواحد</div>
         </div>
       </a>
-      <a href="page3.html" class="project-card">
+      <a href="/paper_project" class="project-card">
         <div class="project-card-image" style="background-image: url('{{asset('web/images/paper.png')}}');">
           <div class="project-card-title">مشروع إعادة تدوير الورق</div>
         </div>
@@ -189,7 +190,7 @@
               </li> --}}
 
 
-    <button class="more-news">للمزيد من الأخبار</button>
+    <a href="/our_news"><button class="more-news">للمزيد من الأخبار</button></a>
   </section>
 
 

@@ -83,7 +83,7 @@
                     <a href="#" class="nav-link ">
                         <i class="fa fa-th"></i>
                       <p>
-                       قائمة ضبط السياسات
+                       قائمة ضبط الحوكمة
                         <i class="right fas fa-angle-left"></i>
                       </p>
                     </a>
@@ -91,10 +91,68 @@
                       <li class="nav-item">
                         <a href="/policie" class="nav-link">
                           <i class="far fa-circle nav-icon"></i>
-                          <p> تعديل وتغير السياسات </p>
+                          <p> تعديل السياسات واللوائح </p>
                         </a>
                       </li>
+
+                        <li class="nav-item">
+                          <a href="/financial_report" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p> تعديل التقارير المالية </p>
+                          </a>
+                        </li>
                     </ul>
+
+                    <li class="nav-item has-treeview">
+                        <a href="#" class="nav-link ">
+                            <i class="fa fa-th"></i>
+                          <p>
+                           قائمة ضبط التبرعات
+                            <i class="right fas fa-angle-left"></i>
+                          </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                          <li class="nav-item">
+                            <a href="/donation" class="nav-link">
+                              <i class="far fa-circle nav-icon"></i>
+                              <p>   عرض التبرعات </p>
+                            </a>
+                          </li>
+                        </ul>
+
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link ">
+                                <i class="fa fa-th"></i>
+                              <p>
+                               قائمة ضبط تواصل معنا
+                                <i class="right fas fa-angle-left"></i>
+                              </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                              <li class="nav-item">
+                                <a href="/contact_us" class="nav-link">
+                                  <i class="far fa-circle nav-icon"></i>
+                                  <p>   عرض الرسائل </p>
+                                </a>
+                              </li>
+                            </ul>
+
+                            <li class="nav-item has-treeview">
+                                <a href="" class="nav-link ">
+                                    <i class="fa fa-th"></i>
+                                  <p>
+                                   قائمة ضبط الاجتماعات
+                                    <i class="right fas fa-angle-left"></i>
+                                  </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                  <li class="nav-item">
+                                    <a href="/meetings/index" class="nav-link">
+                                      <i class="far fa-circle nav-icon"></i>
+                                      <p>  التعديل على محاضر الاجتماع </p>
+                                    </a>
+                                  </li>
+                                </ul>
 
                       <li class="nav-item has-treeview">
                         <a href="#" class="nav-link ">
@@ -113,7 +171,17 @@
                           </li>
                         </ul>
 
+                        <li class="nav-item has-treeview">
+                            <a href="/almokhwa" class="nav-link ">
+                                <i class="fa fa-th"></i>
+                              <p>
+                                الموقع التعريفي
+                                <i class="right fas fa-angle-left"></i>
+                              </p>
+                            </a>
+
                       </li>
+                    </ul>
     </nav>
     <!-- /.sidebar-menu -->
   </div>

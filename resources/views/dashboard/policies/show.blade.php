@@ -9,7 +9,7 @@
 <a href="/dashboard"> الرئيسية  </a>
 @endsection
 @section('contentheaderactive')
-العمليات علي الصور
+العمليات على الحوكمة
 @endsection
 @section('content')
 
@@ -26,7 +26,7 @@
 
     <thead class="custom_thead">
         <tr>
-            <th>تفاصيل الصورة</th>
+            <th>تفاصيل السياسات والوائح  </th>
         </tr>
     </thead>
 
@@ -35,11 +35,22 @@
         <tr>
 
             <td>
-                عنوان الصورة:
+                عنوان السياسة واللائحة :
                 <br>
                 <br>
-                {{$images->title}}
+                {{$policies->policies_title}}
             </td>
+        </tr>
+
+        <tr>
+            <td>
+                ملف التقرير  :
+                <br>
+                <br>
+
+                <iframe src="{{asset($policies->policies)}}" style="width: 800px" alt=""></iframe>
+            </td>
+
         </tr>
 
         <tr>
@@ -48,38 +59,19 @@
                 <br>
                 <br>
 
-                {{$images->added->name}}
+                {{$policies->added->name}}
             </td>
         </tr>
 
-         <tr>
-            <td>
-                الصورة الرئيسية :
-                <br>
-                <br>
 
-                <img src="{{asset($images->main_image)}}" style="width: 300px" class="img-thumbnail" alt="">
-            </td>
 
-         </tr>
-
-         <tr>
-            <td>
-                الصورة الفرعية :
-                <br>
-                <br>
-
-                <img src="{{asset($images->photos)}}" style="width: 300px" class="img-thumbnail" alt="">
-            </td>
-
-         </tr>
 
 <tr>
     <td>
-             <a href="{{ route('photo.edit',$images->id )}}" class="btn btn-info btn-sm"><i class="fa fa-edit"></i> تعديل </a>
+             <a href="{{ route('policie.edit',$policies->id )}}" class="btn btn-info btn-sm"><i class="fa fa-edit"></i> تعديل </a>
 
 
-                <form action=" {{ route('photo.destroy', $images->id) }}" method="post" style="display: inline-block">
+                <form action=" {{ route('policie.destroy', $policies->id) }}" method="post" style="display: inline-block">
                     {{ csrf_field() }}
                     {{ method_field('delete') }}
                     <button type="submit" class="btn btn-danger delete btn-sm" ><i class="fa fa-trash"></i> حذف </button>

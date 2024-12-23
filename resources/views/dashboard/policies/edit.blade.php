@@ -33,16 +33,11 @@
 
 
                         <div class="form-group">
-                            <label> الهيكل التنظيمي </label>
-                            <input type="text" name="frame_title" class="form-control" value="{{ $policies->frame_title }}">
-                            <input type="file" name="frame" class="form-control image">
-                        </div>
-
-
-                        <div class="form-group">
                             <label> السياسات واللوائح </label>
                             <input type="text" name="policies_title" class="form-control" value="{{ $policies->policies_title }}">
-                            <input type="file" name="policies" class="form-control image">
+                        </div>
+                            <div class="form-group">
+                            <input type="file" name="policies" class="form-control">
                         </div>
 
 
