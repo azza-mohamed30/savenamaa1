@@ -66,41 +66,14 @@ class MeetingsController extends Controller
 
             session()->flash('success', __('تمت اضافة محاضر الاجتماع بنجاح'));
 
-            return redirect()->route('dashboard.meeting.index');
+            return redirect()->route('dashboard.meetings.index');
 
      }//end of store
 
 
     public function store(Request $request)
     {
-        $request->validate([
-
-            'title' => 'required',
-            'user_id' => 'required',
-           ]);
-           $request_data = $request->except(['file']);
-
-           if ($request->file) {
-            $request->validate([
-                'file' => 'mimes:pdf,doc,docx',
-              ]);
-
-              $meeting = $request->file('file');
-              $meetingName = time().'_'.$meeting->getClientOriginalName();
-              $meeting->move(public_path('meetings/'),$meetingName);
-
-             $request_data['meetings'] = 'meetings/'.$meetingName;
-
-        }//end of if
-
-
-
-           $meetings = Meeting::create($request_data);
-
-
-           session()->flash('success', __('تمت اضافة محاضر الاجتماع بنجاح'));
-
-           return redirect()->route('meetings.index');
+       //
 
     }//end of store
 
@@ -110,25 +83,18 @@ class MeetingsController extends Controller
      */
     public function show(string $id)
     {
-        // $meetings = Meeting::find($id);
-        // return view('dashboard.meetings.show', compact('meetings'));
-
-        // if(!$policies){
-        //  return response()->json(['message' => 'لم يتم العثور علي السياسة']);
-        // }
-
-        // $fileName = $policies->policies;
-        // $filePath = public_path('/'.$fileName);
-        //  return response()->download($filePath);
-
-        //  $reports = Financial_Report::find($id);
-
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      */
     public function edit(string $id)
+    {
+
+    }
+
+    public function editt(string $id)
     {
         $meetings = Meeting::whereId($id)->first();
         $users = User::whereId($meetings->user_id)->first();
@@ -140,6 +106,11 @@ class MeetingsController extends Controller
      * Update the specified resource in storage.
      */
     public function update(Request $request, string $id)
+    {
+               //
+    }
+
+    public function updatee(Request $request, string $id)
     {
         $meetings = Meeting::whereId($id)->first();
 
@@ -180,7 +151,7 @@ class MeetingsController extends Controller
 
            session()->flash('success', __('تم تعديل محاضر الاجتماع بنجاح'));
 
-           return redirect()->route('meetings.index');
+           return redirect()->route('dashboard.meetings.index');
     }
 
 
@@ -200,6 +171,12 @@ class MeetingsController extends Controller
 
     public function destroy(string $id)
     {
+        //
+
+    }
+
+    public function destrooy(string $id)
+    {
         $meetings = Meeting::whereId($id)->first();
 
         if (File::exists($meetings->file) ) {
@@ -208,6 +185,6 @@ class MeetingsController extends Controller
         }//end of if
         $meetings->delete();
         session()->flash('success', ('تم الحذف  بنجاح'));
-        return redirect()->route('meetings.index');
+        return redirect()->route('dashboard.meetings.index');
     }
 }

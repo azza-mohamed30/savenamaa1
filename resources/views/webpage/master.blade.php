@@ -78,7 +78,7 @@
             <ul class="dropdown-menu">
                 <li><a href="/policies">السياسات واللوائح</a></li>
                 <li><a href="/financial">التقارير المالية</a></li>
-                <li><a href="#"> محاضر الإجتماعات </a></li>
+                <li><a href="/meeting"> محاضر الإجتماعات </a></li>
             </ul>
         </li>
         <li><a href="/contactus">تواصل معنا</a></li>

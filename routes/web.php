@@ -34,6 +34,9 @@ Route::get('/paper_project', [WebpageController::class, 'paper_project'])->name(
 Route::get('/donation_form', [WebpageController::class, 'donation_form'])->name('donation_form');
 Route::resource('donation', Donation_formController::class);
 Route::resource('contact_us', Contact_usController::class);
+Route::get('/meetings_show/{meeting}', [WebpageController::class, 'meetings_show'])->name('meetings_show');
+Route::get('/meeting', [WebpageController::class, 'meeting'])->name('meeting');
+
 
 
 
@@ -54,9 +57,13 @@ Route::middleware('auth')->group(function () {
     Route::resource('donation', Donation_formController::class);
     Route::resource('financial_report', Financial_reportcController::class);
     Route::resource('contact_us', Contact_usController::class);
-    Route::get('/meetings/index', [MeetingsController::class, 'main'])->name('dashboard.meeting.index');
-    Route::resource('meetings', MeetingsController::class);
-    Route::post('/meetings/store', [MeetingsController::class, 'storee'])->name('dashboard.meeting.store');
+    Route::get('/meetings/index', [MeetingsController::class, 'main'])->name('dashboard.meetings.index');
+    Route::get('/meetings/create', [MeetingsController::class, 'create'])->name('dashboard.meetings.create');
+    Route::post('/meetings/store', [MeetingsController::class, 'storee'])->name('dashboard.meetings.store');
+    Route::get('/meetings/{meeting}/edit', [MeetingsController::class, 'editt'])->name('dashboard.meetings.edit');
+    Route::put('/meetings/{meeting}', [MeetingsController::class, 'updatee'])->name('dashboard.meetings.update');
+    Route::delete('/meetings/{meeting}', [MeetingsController::class, 'destrooy'])->name('dashboard.meetings.destroy');
+
 
 
     Route::get('/projects', [WebpageController::class, 'projects'])->name('projects');
@@ -73,9 +80,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/athath', [WebpageController::class, 'athath'])->name('athath');
     Route::get('/paper_project', [WebpageController::class, 'paper_project'])->name('paper_project');
     Route::get('/donation_form', [WebpageController::class, 'donation_form'])->name('donation_form');
+    Route::get('/meeting', [WebpageController::class, 'meeting'])->name('meeting');
+    Route::get('/meetings_show/{meeting}', [WebpageController::class, 'meetings_show'])->name('meetings_show');
     Route::get('/download_policie/{policie}', [PoliciesController::class, 'download'])->name('download_policie');
     Route::get('/download_report/{report}', [Financial_reportcController::class, 'download'])->name('download_report');
-    Route::get('/meetings_show', [MeetingsController::class, 'download'])->name('meetings_download');
+    Route::get('/meetings_download/{meetings}', [MeetingsController::class, 'download'])->name('meetings_download');
 
 });
 

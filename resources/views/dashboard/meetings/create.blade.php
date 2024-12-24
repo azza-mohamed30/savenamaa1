@@ -21,7 +21,7 @@
 
                     @include('partials._errors')
 
-                    <form action="{{ route('dashboard.meeting.store')}}" method="post" enctype="multipart/form-data">
+                    <form action="{{ route('dashboard.meetings.store')}}" method="post" enctype="multipart/form-data">
 
                         {{ csrf_field() }}
                         {{ method_field('post') }}

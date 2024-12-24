@@ -24,7 +24,7 @@
             <h3 class="box-title" style="margin-bottom: 15px">اجمالية <small>{{ $meetings->total() }} </small></h3>
 
 
-        <form action="{{ route('dashboard.meeting.index') }}" method="get">
+        <form action="{{ route('dashboard.meetings.index') }}" method="get">
 
         <div class="row">
 
@@ -35,7 +35,7 @@
         <div class="col-md-4">
             <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> ابحث </button>
 
-            <a href="{{ route('meetings.create')}}" class="btn btn-primary"><i class="fa fa-plus"></i> إضافة </a>
+            <a href="{{ route('dashboard.meetings.create')}}" class="btn btn-primary"><i class="fa fa-plus"></i> إضافة </a>
 
         </div>
 
@@ -69,12 +69,10 @@
 
             <td>
 
-             <a href="{{ route('meetings.edit',$meeting->id )}}" class="btn btn-info btn-sm"><i class="fa fa-edit"></i> تعديل </a>
-
-             <a href="{{ route('meetings.show',$meeting->id )}}" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i> عرض </a>
+             <a href="{{ route('dashboard.meetings.edit',$meeting->id )}}" class="btn btn-info btn-sm"><i class="fa fa-edit"></i> تعديل </a>
 
 
-                <form action=" {{ route('meetings.destroy', $meeting->id) }}" method="post" style="display: inline-block">
+                <form action=" {{ route('dashboard.meetings.destroy', $meeting->id) }}" method="post" style="display: inline-block">
                     {{ csrf_field() }}
                     {{ method_field('delete') }}
                     <button type="submit" class="btn btn-danger delete btn-sm"><i class="fa fa-trash"></i> حذف </button>

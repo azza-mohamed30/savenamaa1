@@ -21,7 +21,7 @@
 
                     @include('partials._errors')
 
-                    <form action="{{ route('meetings.update', $meetings->id)}}" method="post" enctype="multipart/form-data">
+                    <form action="{{ route('dashboard.meetings.update', $meetings->id)}}" method="post" enctype="multipart/form-data">
                         {{ csrf_field() }}
                         {{ method_field('put') }}
 

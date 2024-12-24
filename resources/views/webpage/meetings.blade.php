@@ -1,3 +1,6 @@
+@extends('webpage.master')
+
+@section('content')
 
 
 <section class="policies">
@@ -8,8 +11,8 @@
 
 
         <div class="policy-item">
-            <p> {{$meeting->file}} </p>
-            <a href="{{route('meeting_show',$meeting->id)}}"><button class="download-btn">تحميل</button></a>
+            <p> {{$meeting->title}} </p>
+            <a href="{{route('meetings_show',$meeting->id)}}"><button class="download-btn">تحميل</button></a>
 
         </div>
 
@@ -17,3 +20,5 @@
 
     </div>
     </section>
+
+    @endsection

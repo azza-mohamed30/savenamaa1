@@ -9,6 +9,7 @@ use App\Models\News;
 use App\Models\Policies;
 use Illuminate\Http\Request;
 use App\Models\Financial_report;
+use App\Models\Meeting;
 
 class WebpageController extends Controller
 {
@@ -108,14 +109,15 @@ class WebpageController extends Controller
         return view('webpage.donation_form');
     }
 
-    public function meetings (){
-
-        return view('webpage.meetings');
-    }
-
-    public function meetings_show (){
+    public function meeting (){
 
         $meetings = Meeting::all();
+        return view('webpage.meetings', compact('meetings'));
+    }
+
+    public function meetings_show (string $id){
+
+        $meetings = Meeting::whereId($id)->first();
         return view('webpage.meetings_show',compact('meetings'));
     }
 }

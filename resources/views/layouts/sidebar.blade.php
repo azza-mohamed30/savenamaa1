@@ -172,7 +172,7 @@
                         </ul>
 
                         <li class="nav-item has-treeview">
-                            <a href="/almokhwa" class="nav-link ">
+                            <a href="/index" class="nav-link ">
                                 <i class="fa fa-th"></i>
                               <p>
                                 الموقع التعريفي
