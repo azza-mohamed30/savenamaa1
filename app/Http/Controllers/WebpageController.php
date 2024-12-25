@@ -20,7 +20,7 @@ class WebpageController extends Controller
         $statistics = Statistic::all();
         $news = News::all();
 
-        return view('webpage.almokhwa', compact('images','statistics','news'));
+        return view('webpage.index', compact('images','statistics','news'));
     }
 
 

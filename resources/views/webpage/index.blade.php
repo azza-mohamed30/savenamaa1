@@ -133,28 +133,28 @@
     <h2>اخبارنا</h2>
 
     <ul class="cards">
-         @foreach ($news as $new)
+
+        @foreach ($news->take(3) as $new)
+        <li>
+          <a href="" class="cardx">
+            <img src="{{asset($new->image)}}" class="cardx__image" alt="" />
+            <div class="cardx__overlay">
+              <div class="cardx__header">
 
 
+                <div class="cardx__header-text">
+                  <h3 class="cardx__title">{{$new->title}}</h3>
+                  <span class="cardx__status">{{$new->created_at}}</span>
+                </div>
+              </div>
+              <p class="cardx__description"> {{$new->description}} </p>
+            </div>
+          </a>
+        </li>
 
-              <li>
-                <a href="" class="cardx">
-                  <img src="{{asset($new->image)}}" class="cardx__image" alt="" />
-                  <div class="cardx__overlay">
-                    <div class="cardx__header">
+      @endforeach
 
 
-                      <div class="cardx__header-text">
-                        <h3 class="cardx__title">{{$new->title}}</h3>
-                        <span class="cardx__status">{{$new->created_at}}</span>
-                      </div>
-                    </div>
-                    <p class="cardx__description"> {{$new->description}} </p>
-                  </div>
-                </a>
-              </li>
-
-            @endforeach
         </ul>
               {{-- <li>
                 <a href="" class="cardx">

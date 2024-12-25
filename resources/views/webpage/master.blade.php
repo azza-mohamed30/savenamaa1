@@ -70,7 +70,7 @@
                 <li><a href="/aboutus">عن الجمعية</a></li>
             </ul>
         </li>
-        <li><a href="/almokhwa#fields-section">مجالاتنا</a></li>
+        <li><a href="/index#fields-section">مجالاتنا</a></li>
         <li><a href="/projects">مشاريعنا</a></li>
         <li><a href="/our_news">اخبارنا</a></li>
         <li class="dropdown">
