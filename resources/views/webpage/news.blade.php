@@ -24,7 +24,7 @@
             {{ $new->title}}
           </h3>
           <p class="news-page-card-description">
-           {{ $new->description}}
+           {!! $new->description !!}
           </p>
           <a href="#" class="news-page-read-more">إقرأ المزيد >></a>
         </div>

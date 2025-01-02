@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Donation_form;
-use File;
+use Illuminate\Support\Facades\File;
 
 class Donation_formController extends Controller
 {

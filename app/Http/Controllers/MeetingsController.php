@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 use App\Models\Meeting;
 use App\Models\User;
 use Illuminate\Http\Request;
-use File;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 
 
 class MeetingsController extends Controller
@@ -28,7 +29,7 @@ class MeetingsController extends Controller
 
     public function create()
     {
-        $id = auth()->user()->id;
+        $id = auth::user()->id;
         $users = User::whereId($id)->first();
         return view('dashboard.meetings.create',compact('users'));
     }
@@ -144,7 +145,7 @@ class MeetingsController extends Controller
         }//end of if
 
 
-        $request_data['user_id'] = auth()->user()->id;
+        $request_data['user_id'] = auth::user()->id;
 
            $meetings->update($request_data);
 

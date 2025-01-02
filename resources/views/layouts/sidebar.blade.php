@@ -154,7 +154,7 @@
                                   </li>
                                 </ul>
 
-                      <li class="nav-item has-treeview">
+                      {{-- <li class="nav-item has-treeview">
                         <a href="#" class="nav-link ">
                             <i class="fa fa-th"></i>
                           <p>
@@ -169,7 +169,7 @@
                               <p> تغير اللون </p>
                             </a>
                           </li>
-                        </ul>
+                        </ul> --}}
 
                         <li class="nav-item has-treeview">
                             <a href="/index" class="nav-link ">

@@ -147,7 +147,7 @@
                   <span class="cardx__status">{{$new->created_at}}</span>
                 </div>
               </div>
-              <p class="cardx__description"> {{$new->description}} </p>
+              <p class="cardx__description"> {!! $new->description !!} </p>
             </div>
           </a>
         </li>
