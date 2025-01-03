@@ -117,7 +117,7 @@
   <div class="footer-col">
         <h4>جمعية المحافظه على النعمة وترشيدها</h4>
         <ul class="links">
-          <li><a href="/policies">السياسات و الوائح</a></li>
+          <li><a href="/policies">السياسات و اللوائح</a></li>
           <li><a href="/contactus">تواصل معنا</a></li>
           <li><a href="/members">مجلس اللإدارة</a></li>
         </ul>
